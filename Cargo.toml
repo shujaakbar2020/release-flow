@@ -1,0 +1,18 @@
+[package]
+name = "release-flow"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+clap = { version = "4.4", features = ["derive", "env"] }
+git2 = { version = "0.18", default-features = false }
+semver = "1.0"
+git-conventional = "0.12"
+octocrab = { version = "0.32", default-features = false, features = ["rustls"] }
+tokio = { version = "1.33", features = ["full"] }
+anyhow = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+dotenv = "0.15"
+log = "0.4"
+env_logger = "0.10"

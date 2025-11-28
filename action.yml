@@ -1,0 +1,28 @@
+name: 'Rust Release Flow'
+description: 'Automated semantic release using Rust'
+inputs:
+  github-token:
+    description: 'GitHub Token'
+    required: true
+  dry-run:
+    description: 'Dry run mode'
+    required: false
+    default: 'false'
+outputs:
+  version:
+    description: 'The new version'
+    value: ${{ steps.release.outputs.version }}
+  tag:
+    description: 'The new tag'
+    value: ${{ steps.release.outputs.tag }}
+runs:
+  using: "composite"
+  steps:
+    - name: Run Release Flow
+      id: release
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}
+      run: |
+        cd ${{ github.action_path }}
+        cargo run --release -- --dry-run=${{ inputs.dry-run }} --path=${{ github.workspace }}
