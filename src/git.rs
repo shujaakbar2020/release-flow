@@ -59,6 +59,5 @@ impl GitRepo {
 
         Ok(commits)
     }
-    
 
 }
