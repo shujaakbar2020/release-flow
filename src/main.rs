@@ -21,7 +21,7 @@ struct Args {
     token: Option<String>,
 
     /// Dry run mode (calculate version but don't create release)
-    #[arg(long, default_value = "false")]
+    #[arg(long, default_value = "false", action = clap::ArgAction::Set)]
     dry_run: bool,
 }
 
