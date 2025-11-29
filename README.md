@@ -1,3 +1,5 @@
+# Release Flow - Automated Semantic Release in Rust
+
 <div align="center">
    <img align="center" width="128px" src="src/img/icon.png" />
 	<h1 align="center"><b>Release Flow</b></h1>
@@ -8,7 +10,6 @@
 
 <br/>
 
-# Release Flow - Automated Semantic Release in Rust
 
 Release Flow is a tool to automate the release process for Rust projects. It is designed to be used as a GitHub Action, providing a seamless experience for managing versions, generating changelogs, and creating GitHub releases.
 
